@@ -14,8 +14,7 @@ CaelestiaSites brings your system-wide [Matugen](https://github.com/InioAsman/ma
 - **🚀 Real-Time Injection**: Updates colors instantly across all tabs as soon as Matugen generates new colors.
 - **🛡️ Crash-Proof & Lightweight**: Optimized with staggered updates and IPC filtering to ensure zero system lag, even with 100+ tabs open.
 - **🎨 Site-Specific CSS**: Automatically applies custom CSS overrides for specific domains (e.g., GitHub, YouTube) using your Matugen variables.
-- **⚙️ Fully Configurable**: Easy-to-use Options page to set your own paths for `colors.css` and your custom website styles.
-- **📦 Portable**: No hardcoded paths; works on any Linux or macOS system.
+- **⚙️ Zero Configuration**: Paths are hardcoded for Caelestia — works out of the box.
 
 ---
 
@@ -48,20 +47,10 @@ Currently, you can load CaelestiaSites as a temporary extension:
 
 ## ⚙️ Configuration
 
-Once installed, you need to tell CaelestiaSites where your files are:
+Configuration is no longer required — paths are hardcoded to Caelestia's defaults:
 
-1.  Right-click the **CaelestiaSites icon** (🦊) in your toolbar.
-2.  Select **Manage Extension**.
-3.  Go to the **Options** tab.
-4.  Enter the paths to your files:
-    - **Generated Theme Path**: e.g., `~/.local/state/caelestia/theme`
-    - **Template Directory**: e.g., `~/.config/caelestia/templates`
- 5.  Click **Save**.
-
-### Paths
-
-- **Template path**: `~/.config/caelestia/templates` — place your Caelestia template here
-- **Generated output**: `~/.local/state/caelestia/theme` — the rendered theme file watched by the host
+- **Template directory**: `~/.config/caelestia/templates`
+- **Generated output**: `~/.local/state/caelestia/theme`
 
 ---
 
