@@ -30,7 +30,7 @@ CaelestiaSites brings your system-wide [Matugen](https://github.com/InioAsman/ma
 The Native Host is a small Python bridge that watches your files and talks to Firefox.
 
 ```bash
-git clone https://github.com/Ubaidullah-Web-Dev/CaelestiaSites.git
+git clone https://github.com/dim-ghub/CaelestiaSites.git
 cd CaelestiaSites
 chmod +x setup.sh
 ./setup.sh
