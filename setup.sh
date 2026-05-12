@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# MatugenFox Native Host Setup Script
-# This script registers the matugenfox native messaging host with Firefox.
+# CaelestiaSites Native Host Setup Script
+# This script registers the caelestiasites native messaging host with Firefox.
 
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-HOST_PATH="$SCRIPT_DIR/matugenfox_host.py"
-MANIFEST_NAME="matugenfox.json"
+HOST_PATH="$SCRIPT_DIR/caelestiasites_host.py"
+MANIFEST_NAME="caelestiasites.json"
 MANIFEST_PATH="$SCRIPT_DIR/extension/$MANIFEST_NAME"
 
-echo "🦊 MatugenFox Setup"
+echo "🦊 CaelestiaSites Setup"
 
 # 1. Make host executable
 echo "  > Making host script executable..."
@@ -30,19 +30,44 @@ mkdir -p "$TARGET_DIR"
 echo "  > Generating native messaging manifest..."
 cat <<EOF > "$TARGET_DIR/$MANIFEST_NAME"
 {
-  "name": "matugenfox",
-  "description": "MatugenFox Native Messaging Host",
+  "name": "caelestiasites",
+  "description": "CaelestiaSites Native Messaging Host",
   "path": "$HOST_PATH",
   "type": "stdio",
   "allowed_extensions": [
-    "matugenfox@ubaid.com"
+    "caelestiasites@dim.contact"
   ]
 }
 EOF
 
+# 4. Copy template
+TEMPLATE_DIR="$HOME/.config/caelestia/templates"
+TEMPLATE_SRC="$SCRIPT_DIR/Website Templates/caelestiasites.css"
+
+echo "  > Installing CaelestiaSites template..."
+mkdir -p "$TEMPLATE_DIR"
+if [ -f "$TEMPLATE_SRC" ]; then
+    cp "$TEMPLATE_SRC" "$TEMPLATE_DIR/"
+    echo "  ✅ Template copied to $TEMPLATE_DIR/caelestiasites.css"
+else
+    echo "  ⚠️ Template file not found at $TEMPLATE_SRC"
+fi
+
 echo "✅ Setup Complete!"
 echo "--------------------------------------------------"
-echo "1. Load the extension in Firefox (about:debugging)."
-echo "2. Open the extension Options to set your paths."
-echo "3. Restart Firefox if the host doesn't connect."
+echo "To load the extension in Firefox:"
+echo "  1. Open Firefox and go to about:debugging#/runtime/this-firefox"
+echo "  2. Click \"Load Temporary Add-on…\""
+echo "  3. Select: $MANIFEST_PATH"
+echo ""
+echo "Website CSS templates are served from: $SCRIPT_DIR/Website Templates/"
+echo "Restart Firefox if the host doesn't connect."
+echo "--------------------------------------------------"
+echo "--------------------------------------------------"
+echo "To load the extension in Firefox:"
+echo "  1. Open Firefox and go to about:debugging#/runtime/this-firefox"
+echo "  2. Click \"Load Temporary Add-on…\""
+echo "  3. Select: $MANIFEST_PATH"
+echo ""
+echo "Restart Firefox if the host doesn't connect."
 echo "--------------------------------------------------"

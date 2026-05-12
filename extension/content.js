@@ -9,12 +9,12 @@ function applyTheme(data) {
     if (currentHash === lastAppliedHash) return;
     lastAppliedHash = currentHash;
 
-    console.log("MatugenFox: Applying optimized theme update");
+    console.log("CaelestiaSites: Applying optimized theme update");
 
     requestAnimationFrame(() => {
         if (!matugenStyle) {
-            matugenStyle = document.getElementById("matugenfox-style") || document.createElement("style");
-            matugenStyle.id = "matugenfox-style";
+            matugenStyle = document.getElementById("caelestiasites-style") || document.createElement("style");
+            matugenStyle.id = "caelestiasites-style";
             document.documentElement.appendChild(matugenStyle);
         }
 
@@ -49,7 +49,7 @@ browser.runtime.onMessage.addListener((message) => {
 // This ensures our style tag stays at the bottom of <html> to override others
 setInterval(() => {
     if (matugenStyle && document.documentElement) {
-        if (!document.getElementById("matugenfox-style") || matugenStyle.nextSibling) {
+        if (!document.getElementById("caelestiasites-style") || matugenStyle.nextSibling) {
             document.documentElement.appendChild(matugenStyle);
         }
     }

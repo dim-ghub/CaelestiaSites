@@ -40,7 +40,7 @@ document.getElementById("reconnect-btn").addEventListener("click", () => {
 });
 
 document.getElementById("github-btn").addEventListener("click", () => {
-    browser.tabs.create({ url: "https://github.com/Ubaidullah-Web-Dev/MatugenFox" });
+    browser.tabs.create({ url: "https://github.com/Ubaidullah-Web-Dev/CaelestiaSites" });
 });
 
 // Initial updates

@@ -1,8 +1,8 @@
-# 🦊 MatugenFox
+# 🦊 CaelestiaSites
 
 **Live, dynamic webpage theming for Firefox powered by Matugen.**
 
-MatugenFox brings your system-wide [Matugen](https://github.com/InioAsman/matugen) colors directly into your browser. Unlike static CSS themes, MatugenFox injects your colors into every open tab in real-time. Change your wallpaper, and watch your browser colors update instantly without a page refresh.
+CaelestiaSites brings your system-wide [Matugen](https://github.com/InioAsman/matugen) colors directly into your browser. Unlike static CSS themes, CaelestiaSites injects your colors into every open tab in real-time. Change your wallpaper, and watch your browser colors update instantly without a page refresh.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Firefox](https://img.shields.io/badge/Firefox-Extension-orange.svg)
@@ -30,14 +30,14 @@ MatugenFox brings your system-wide [Matugen](https://github.com/InioAsman/matuge
 The Native Host is a small Python bridge that watches your files and talks to Firefox.
 
 ```bash
-git clone https://github.com/Ubaidullah-Web-Dev/MatugenFox.git
-cd MatugenFox
+git clone https://github.com/Ubaidullah-Web-Dev/CaelestiaSites.git
+cd CaelestiaSites
 chmod +x setup.sh
 ./setup.sh
 ```
 
 ### 3. Install the Extension
-Currently, you can load MatugenFox as a temporary extension:
+Currently, you can load CaelestiaSites as a temporary extension:
 
 1.  Open Firefox and go to `about:debugging`.
 2.  Click **"This Firefox"** on the left.
@@ -48,15 +48,20 @@ Currently, you can load MatugenFox as a temporary extension:
 
 ## ⚙️ Configuration
 
-Once installed, you need to tell MatugenFox where your files are:
+Once installed, you need to tell CaelestiaSites where your files are:
 
-1.  Right-click the **MatugenFox icon** (🦊) in your toolbar.
+1.  Right-click the **CaelestiaSites icon** (🦊) in your toolbar.
 2.  Select **Manage Extension**.
 3.  Go to the **Options** tab.
 4.  Enter the paths to your files:
-    - **Colors CSS Path**: e.g., `~/.config/matugen/colors.css`
-    - **Websites CSS Directory**: e.g., `~/.config/matugen/websites`
-5.  Click **Save**.
+    - **Generated Theme Path**: e.g., `~/.local/state/caelestia/theme`
+    - **Template Directory**: e.g., `~/.config/caelestia/templates`
+ 5.  Click **Save**.
+
+### Paths
+
+- **Template path**: `~/.config/caelestia/templates` — place your Caelestia template here
+- **Generated output**: `~/.local/state/caelestia/theme` — the rendered theme file watched by the host
 
 ---
 
@@ -73,7 +78,7 @@ Example: `github.css`
     }
 }
 ```
-*Note: MatugenFox will automatically detect the domain and apply the CSS using your Matugen variables (e.g., `--base`, `--text`).*
+*Note: CaelestiaSites will automatically detect the domain and apply the CSS using your Matugen variables (e.g., `--base`, `--text`).*
 
 ---
 

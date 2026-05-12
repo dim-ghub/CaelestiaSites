@@ -3,8 +3,8 @@ let lastThemeData = null;
 let updateTimeout = null;
 
 function connect() {
-    console.log("Connecting to matugenfox native host...");
-    port = browser.runtime.connectNative("matugenfox");
+    console.log("Connecting to caelestiasites native host...");
+    port = browser.runtime.connectNative("caelestiasites");
     
     // Send initial config
     sendConfigToHost();
@@ -30,22 +30,13 @@ function connect() {
 
 function sendConfigToHost() {
     if (!port) return;
-    browser.storage.local.get("config").then(res => {
-        if (res.config) {
-            port.postMessage({
-                type: "SET_CONFIG",
-                config: res.config
-            });
+    port.postMessage({
+        type: "SET_CONFIG",
+        config: {
+            themePath: "~/.local/state/caelestia/theme/caelestiasites.css"
         }
     });
 }
-
-// Watch for config changes
-browser.storage.onChanged.addListener((changes, area) => {
-    if (area === "local" && changes.config) {
-        sendConfigToHost();
-    }
-});
 
 function filterWebsitesForTab(url, websites) {
     if (!url || !websites) return "";
@@ -54,7 +45,7 @@ function filterWebsitesForTab(url, websites) {
         let siteCss = "";
         for (const [domain, css] of Object.entries(websites)) {
             if (hostname === domain || hostname.endsWith("." + domain)) {
-                siteCss += `/* MatugenFox: ${domain} */\n${css}\n`;
+                siteCss += `/* CaelestiaSites: ${domain} */\n${css}\n`;
             }
         }
         return siteCss;
