@@ -1,8 +1,8 @@
 # 🦊 CaelestiaSites
 
-**Live, dynamic webpage theming for Firefox powered by Matugen.**
+**Live, dynamic webpage theming for Firefox powered by Caelestia.**
 
-CaelestiaSites brings your system-wide [Matugen](https://github.com/InioAsman/matugen) colors directly into your browser. Unlike static CSS themes, CaelestiaSites injects your colors into every open tab in real-time. Change your wallpaper, and watch your browser colors update instantly without a page refresh.
+CaelestiaSites brings your system-wide [Caelestia](https://github.com/dim-ghub/CaelestiaSites) colors directly into your browser. Unlike static CSS themes, CaelestiaSites injects your colors into every open tab in real-time. Change your wallpaper, and watch your browser colors update instantly without a page refresh.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Firefox](https://img.shields.io/badge/Firefox-Extension-orange.svg)
@@ -11,9 +11,9 @@ CaelestiaSites brings your system-wide [Matugen](https://github.com/InioAsman/ma
 
 ## ✨ Features
 
-- **🚀 Real-Time Injection**: Updates colors instantly across all tabs as soon as Matugen generates new colors.
+- **🚀 Real-Time Injection**: Updates colors instantly across all tabs as soon as Caelestia generates new colors.
 - **🛡️ Crash-Proof & Lightweight**: Optimized with staggered updates and IPC filtering to ensure zero system lag, even with 100+ tabs open.
-- **🎨 Site-Specific CSS**: Automatically applies custom CSS overrides for specific domains (e.g., GitHub, YouTube) using your Matugen variables.
+- **🎨 Site-Specific CSS**: Automatically applies custom CSS overrides for specific domains (e.g., GitHub, YouTube) using your Caelestia variables.
 - **⚙️ Zero Configuration**: Paths are hardcoded for Caelestia — works out of the box.
 
 ---
@@ -23,7 +23,7 @@ CaelestiaSites brings your system-wide [Matugen](https://github.com/InioAsman/ma
 ### 1. Prerequisites
 - **Firefox**
 - **Python 3**
-- **Matugen** (configured to output a CSS variables file)
+- **Caelestia** (configured to output a CSS variables file)
 
 ### 2. Setup the Native Host
 The Native Host is a small Python bridge that watches your files and talks to Firefox.
@@ -67,7 +67,7 @@ Example: `github.css`
     }
 }
 ```
-*Note: CaelestiaSites will automatically detect the domain and apply the CSS using your Matugen variables (e.g., `--base`, `--text`).*
+*Note: CaelestiaSites will automatically detect the domain and apply the CSS using your Caelestia variables (e.g., `--base`, `--text`).*
 
 ---
 
