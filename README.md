@@ -36,12 +36,7 @@ chmod +x setup.sh
 ```
 
 ### 3. Install the Extension
-Currently, you can load CaelestiaSites as a temporary extension:
-
-1.  Open Firefox and go to `about:debugging`.
-2.  Click **"This Firefox"** on the left.
-3.  Click **"Load Temporary Add-on..."**.
-4.  Select the `manifest.json` inside the `extension/` folder.
+Get the extension from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/caelestiasites/).
 
 ---
 
