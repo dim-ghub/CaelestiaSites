@@ -9,6 +9,11 @@ CaelestiaSites brings your system-wide [Caelestia](https://github.com/dim-ghub/C
 
 ---
 
+Hey! Will no longer be working on this, check this project out instead!
+[CaelestiaZen](https://github.com/dim-ghub/CaelestiaZen)
+
+---
+
 ## ✨ Features
 
 - **🚀 Real-Time Injection**: Updates colors instantly across all tabs as soon as Caelestia generates new colors.
